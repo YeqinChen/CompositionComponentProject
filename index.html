@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"></meta>
+    <title>Enjoy Trip</title>
+    <style>
+.div1 {margin:10px; outline: 2px solid black; outline-offset: 5px;}
+.div2 {margin:10px; outline: 2px solid gray; outline-offset: 5px;}
+button {background-color: #e7e7e7; color: black;}
+h1 {text-align:center; color:#e7e7e7;}
+    </style>
+</head>
+
+<script src="jquery.min.js"></script>
+<script src="holiday_component.js"></script>
+<script src="hotel_component.js"></script>
+<script src="weather_component.js"></script>
+
+<body> 
+    <h1>Enjoy Your Vocation</h1>
+    <div class='div1'>
+        <label for="Year">Choose a Year:</label>
+        <select id="year" name="year">
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+        </select>
+        <br/>
+        
+        <label for="country">Choose a country:</label>
+        <select id="country" name="country" >
+            <option value="CN" selected="selected">China</option>
+            <option value="GB">The United Kingdom of Great Britain and Northern Ireland</option>
+            <option value="US">The United States of America</option>
+            <option value="JP">Japan</option>
+            <option value="AU">Australia</option>
+        </select>
+        
+        <br/>
+        <button type="button" onclick="holiday()">Get holiday list</button>
+        <div class='div2' id="holidaylt"> </div>
+        <br/>
+    </div>
+    <br/>
+    
+    <div class='div1'>
+        <label for="startdate">Start date:</label>
+        <input type="date" id="startdate" name="startdate">
+        <label for="enddate">End date:</label>
+        <input type="date" id="enddate" name="enddate">
+        <br/>
+        <button type="button" onclick="weather()">Get weather information</button>
+        
+        <div class='div2' id="weatherlt"> </div>
+        <br/>
+    </div>
+    <br/>
+    <div class='div1'>
+        <label for='city'>Enter city(eg. Beijing, London):</label>
+        <input type="text" value="" id="city"></input>
+        <br/>
+        <button type="button" onclick="hotels()">Search hotels</button>
+        <div class='div2' id="hotellt"> </div>
+        <br/>
+    </div>
+    <br/>
+</body>
+</html>
